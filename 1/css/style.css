@@ -1,0 +1,14 @@
+.font{
+}
+body{
+
+    /*background-image: linear-gradient(#bbdefb, #d1c4e9);*/
+    /*background-repeat: no-repeat;*/
+}
+
+.small{
+    font-size: 12px !important;
+}
+.card{
+    height: 100%;
+}
