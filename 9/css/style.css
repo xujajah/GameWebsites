@@ -1,0 +1,16 @@
+#more {display: none;}
+.font{
+    font-family: 'Oleo Script', cursive;
+}
+.bg{
+    background-image: url("../images/—Pngtree—hand-painted watercolor flower background_288917.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.padding{
+    padding-left: 70px;
+    padding-right: 70px;
+}
+.main-container-color{
+    background-color: rgba(255, 255, 255, 0.68);
+}
