@@ -1,0 +1,12 @@
+.font{
+    font-family: 'Alata', sans-serif;
+}
+.footer{
+    background-color: #5c0e03;
+}
+hr{
+    border-color: white;
+}
+body{
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgb(213, 166, 156));
+}
