@@ -1,0 +1,17 @@
+.bg{
+    background-image: url("../images/bgrounf.png");
+    background-size: cover;
+}
+.font{
+    font-family: 'Leckerli One', cursive;
+    color: #03385e !important;
+}
+.footer{
+    border-top: 5px solid #e91e63 !important;
+    border-bottom: 5px solid #e91e63 !important;
+    border-left: 0px;
+    border-right: 0px;
+}
+.btn{
+    background-color: #03385e;
+}
