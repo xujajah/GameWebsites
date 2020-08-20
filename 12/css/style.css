@@ -1,0 +1,16 @@
+h1, h2, h3{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.jumbotron-fluid{
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgb(211, 186, 232));
+}
+.shadow:hover{
+    box-shadow: 0 0 2rem rgb(211, 186, 232) !important;
+}
+.bg-footer{
+    background-color: rgba(156, 39, 176, 0.1);
+}
+.body{
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgb(211, 186, 232));
+}
