@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Free Casino Games</title>
+    <link rel="icon" type="image/png" href="https://via.placeholder.com/50">
+    <meta name="description" content="Free Casino Games">
+    <meta name="keywords" content="Free Online Casino, Online Slots">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/templatemo-style.css"/>
+</head>
+
+<body>
+<div id="page-wraper">
+    <!-- Sidebar Menu -->
+    <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+            <i class="fa fa-times" id="menu-close"></i>
+            <div class="container">
+                <div class="image">
+                    <a href="#"><img src="assets/images/Casino%20Games%20(1).png" alt=""/></a>
+                </div>
+                <nav class="main-nav" role="navigation">
+                    <ul class="">
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </nav>
+
+
+                <div class="copyright-text">
+                    <p>
+                        This is a FREE-TO-PLAY social casino games site where you use play
+                        credits only. This website does NOT offer "real money" gambling opportunities or chance to win
+                        prizes or gifts. This site is intended for 18+ adults only. Practicing at social casino site
+                        does NOT guarantee successes at "real money" gambling in future.
+                    </p>
+                    <img src="assets/images/18_5_50x50.png" alt="" class="img-fluid mb-3 w-25">
+                    <p>Copyright 2020 | All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section about-me" data-section="section1">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Crazy Cows</h2>
+                <div class="line-dec"></div>
+                <div class="pt-5 px-4 mt-4">
+                    <div class="embed-responsive embed-responsive-16by9 my-5">
+                        <iframe class="embed-responsive-item"
+src="https://asccw.playngonetwork.com/Casino/IframedView?pid=2&gid=crazycows&lang=en_US&practice=1&channel=desktop&div=flashobject&width=100%25&height=100%25&user=&password=&ctx=&demo=2&brand=&lobby=&rccurrentsessiontime=0&rcintervaltime=0&rcaccounthistoryurl=&rccontinueurl=&rcexiturl=&rchistoryurlmode=&autoplaylimits=0&autoplayreset=0&callback=flashCallback&rcmga=&resourcelevel=0&hasjackpots=False&country=&pauseplay=&playlimit=&selftest=&sessiontime=&coreweburl=https://asccw.playngonetwork.com/&showpoweredby=True
+">                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Scripts -->
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/custom.js"></script>
+<script>
+    //according to loftblog tut
+    $(".main-menu li:first").addClass("active");
+
+    var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+            reqSection = $(".section").filter(
+                '[data-section="' + direction + '"]'
+            ),
+            reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+            $("body, html").animate(
+                {
+                    scrollTop: reqSectionPos
+                },
+                800
+            );
+        } else {
+            $("body, html").scrollTop(reqSectionPos);
+        }
+    };
+
+    var checkSection = function checkSection() {
+        $(".section").each(function () {
+            var $this = $(this),
+                topEdge = $this.offset().top - 80,
+                bottomEdge = topEdge + $this.height(),
+                wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+                var currentId = $this.data("section"),
+                    reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+                reqLink
+                    .closest("li")
+                    .addClass("active")
+                    .siblings()
+                    .removeClass("active");
+            }
+        });
+    };
+
+    $(".main-menu").on("click", "a", function (e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+    });
+
+    $(window).scroll(function () {
+        checkSection();
+    });
+</script>
+</body>
+</html>
